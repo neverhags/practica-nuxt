@@ -10,7 +10,7 @@ export default {
     }
   },
   async created () {
-    const res = axios.get(`https://jsonplaceholder.typicode.com/posts/${$this.params.id}`)
+    const res = await axios.get(`https://jsonplaceholder.typicode.com/posts/${$this.params.id}`)
     console.log(res.data)
   }
 }
