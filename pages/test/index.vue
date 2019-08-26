@@ -24,7 +24,7 @@ export default {
     try {
       const res = await axios.get('https://jsonplaceholder.typicode.com/posts?_limit=10')
       console.log(res.data)
-      this.articulos = res.data
+      this.articulos = await res.data
     } catch (e) {
       console.log(e.message)
     }
